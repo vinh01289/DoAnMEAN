@@ -1,0 +1,76 @@
+<div class="row main-home">
+    <div class="col-md-12">
+        <div class="alert alert-success" role="alert">
+            <b>NÊN</b>
+            sao chép, chia sẻ,
+            <b>KHÔNG NÊN</b>
+            thương mại hóa.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="panel panel-primary">
+                <div class="list-group-item">
+                    <div class="row thong_tin_ebook">
+                        <div *ngFor="let i of product.data" class="col-md-4 cover">
+                            <a [routerLink]="['/san-pham/'+i._id]">
+                                <div class="product">
+                                    <img src="{{i.urlImg}}">
+                                    <h3>{{i.title}}</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <a href="">
+                                <h2 class="ebook_title text-info">Để Có Trí Nhớ Tốt</h2>
+                            </a>
+                            <p>Tác giả: Trần Văn Vịnh</p>
+                            <p>
+                                Thể Loại
+                                <a href="" class="ebook_title text-info">Tâm Lý - Kỹ Năng Sống</a>
+                            </p>
+                            <p>Lượt xem: 53765</p>
+                            <div class="alert alert-info" role="alert">
+                                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>
+                                Vui lòng chọn định dạng file để tải hoặc đọc online.
+                            </div>
+                            <a href="#" target="_blank" type="button" class="btn btn-danger">PDF</a>
+                            &nbsp;
+                            <a href="#" target="_blank" type="button" class="btn btn-warning btn-md">
+                                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                                Đọc Online
+                            </a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="gioi_thieu_sach text-justify">
+                        <p>
+                            Trí nhớ là cái cốt lõi của sự thành công trong học tập cũng như công việc, người có trí
+                            nhớ tốt sẽ thuận tiện hơn rất nhiều trong cuộc sống. Tuy nhiên, không phải ai trong
+                            chúng ta cũng biết cách làm thế nào để có một trí nhớ tốt?. Để hiểu rõ hơn về điều này
+                            mời các bạn tham khảo Ebook "Để có trí nhớ tốt"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 sidebar">
+            <div class="list-group">
+                <div class="btn btn-info">Danh Ngôn Hay</div>
+                <div class="list-group-item">
+                    Cảm xúc về sự thấp kém càng mạnh, thôi thúc muốn chinh phục càng lớn, và sự khích động càng dữ dội.
+                </div>
+            </div>
+            <br>
+            <ul class="list-group">
+                <li class="btn btn-info">Thể Loại Sách</li>
+                {{category}
+                <li *ngFor="" class="list-group-item" routerLink="#"></li>
+                <!-- <li class="list-group-item" routerLink="#">Tất Cả Sách</li>
+                <li class="list-group-item" routerLink="#">Tất Cả Sách</li>
+                <li class="list-group-item" routerLink="#">Tất Cả Sách</li>
+                <li class="list-group-item" routerLink="#">Tất Cả Sách</li> -->
+            </ul>
+        </div>
+    </div>
+</div>

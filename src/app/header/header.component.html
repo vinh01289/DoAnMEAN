@@ -1,0 +1,54 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a routerLink="" class="navbar-brand text-muted">
+                    <h3 class="logo">SachVui.Com</h3>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <div class="dropdown dropdown-dropp">
+                    <a class="" aria-haspopup="true" aria-expanded="false" routerLink="">Trang
+                        Chủ</a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                    <div class="dropdown dropdown-drop">
+                        <a class="dropdown-toggle dropdown-toggle-drop" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Thể Loại Sách 
+                            <span class="caret"></span>
+                            <ul *ngIf="category" class="dropdown-menu dropdown-menu--custom  ">
+                                <li *ngFor="let i of category.data"><a [routerLink]="['danh-muc/'+i._id]">{{i.nameCategory}}</a></li>
+                                <!-- <li><a href="">aevnawbcaw</a></li> -->
+                            </ul>
+                        </a>
+                        
+                        <!-- <a class="btn btn-outline-info dropdown-toggle" type="button"data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" routerLink="#">
+                            Thể Loại Sách
+                        </a> -->
+                        <!-- <div *ngFor="let i of category.data" class="category__book">
+                            <span></span>
+                            <p>{{i.nameCategory}}</p>
+                        </div> -->
+                    </div>
+            </div>
+            <div class="col-md-2">
+                <div class="dropdown dropdown-dropp">
+                    <a class="dropdown-toggle" routerLink="#" aria-haspopup="true"
+                        aria-expanded="false">Thông Tin</a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-info search" type="submit">
+                            <i class="glyphicon">Tìm</i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

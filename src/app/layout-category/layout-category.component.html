@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row main-home">
+        <div class="col-md-12">
+            <div class="alert alert-success" role="alert">
+                <b>NÊN</b>
+                sao chép, chia sẻ,
+                <b>KHÔNG NÊN</b>
+                thương mại hóa.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                <div class="panel panel-primary">
+                    <div class="p-2 mb-2 btn-info custom" style="border-radius: 3px;">ưaaea</div>
+                    <div class="list-group-item">
+                        <div *ngIf="product" class="row main-home">
+                            <div *ngFor="let i of product.data" class="col-md-3">
+                                <div class="product">
+                                    <a href="{{i.urlToReadBook}}">
+                                        <img src="{{i.urlImg}}">
+                                    </a>
+                                </div>
+                                <h5 class="tieude">{{i.title}}</h5>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-md-6">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" routerLink="#" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li class="page-item"><a class="page-link" routerLink="#">1 <span
+                                                class="sr-only">(current)</span></a></li>
+                                    <li class="page-item"><a class="page-link" routerLink="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" routerLink="#">3</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" routerLink="#" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 sidebar">
+                <app-layout-category-sidebar></app-layout-category-sidebar>
+            </div>
+        </div>
+    </div>
+</div>

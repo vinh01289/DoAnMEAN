@@ -1,0 +1,45 @@
+<div class="alert alert-success" role="alert">
+    <b>NÊN</b>
+    sao chép, chia sẻ,
+    <b>KHÔNG NÊN</b>
+    thương mại hóa.
+</div>
+<div class="banner">
+    <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="images[0]" alt="Random first slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>First slide label</h3>
+                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+        </ng-template>
+        <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+                <img [src]="images[1]" alt="Random second slide">
+            </div>
+            <div class="carousel-caption">
+                <h3>Second slide label</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+</div>
+<div class="jumbotron">
+    <h2 class="text-center">Thư Viện Ebook Miễn Phí</h2>
+    <p class="lead text-center">
+        Thư viện VinhBook.Com là dự án phi lợi nhuận,nhằm mục đích chia sẻ sách và đọc truyện online miễn phí vì cộng
+        đồng.
+    </p>
+    <hr>
+    <div class="">
+        <ul *ngIf="category" class="center-block row" style="list-style-type:none">
+            <li *ngFor="let i of category.data" class="cat-item col-xs-12 col-md-4 col-sm-6">
+                <a [routerLink]="['/danh-muc/'+i._id]" routerLinkActive="active">{{i.nameCategory}}</a>
+            </li>
+        </ul>
+        <p class="text-center" style="padding-top: 20px;">
+            <a class="btn btn-lg btn-success btn-home" routerLink="#" role="button">Tất Cả Sách</a></p>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+
+    <div class="list-group">
+        <div class="btn btn-info custom">Danh Ngôn Hay</div>
+        <div class="list-group-item">
+            Cảm xúc về sự thấp kém càng mạnh, thôi thúc muốn chinh phục càng lớn, và sự khích động càng dữ
+            dội.
+        </div>
+    </div>
+    <br>
+    <ul class="list-group">
+        <li class="btn btn-info custom">Thể Loại Sách</li>
+        <li *ngFor="let i of category.data" class="list-group-item list-group-item--custom "
+        [routerLink]="['/danh-muc/'+i._id]">
+            <span></span>
+            <a> {{i.nameCategory}}</a>
+        </li>
+    </ul>
